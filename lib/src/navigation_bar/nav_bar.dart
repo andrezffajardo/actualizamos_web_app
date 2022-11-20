@@ -21,8 +21,9 @@ class DesktopNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.amber,
       child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(10),
         child: Row(
           children: [
             Image.asset(
