@@ -6,7 +6,7 @@ class AboutContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 500,
+      height: 600,
       child: Stack(
         //alignment: AlignmentDirectional.center,
         children: [
@@ -42,7 +42,7 @@ class AboutContent extends StatelessWidget {
               Expanded(
                 flex: 3,
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(
@@ -64,8 +64,25 @@ class AboutContent extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        Stack(
+                          children: [
+                            Divider(
+                              height: 15,
+                              thickness: 1,
+                              color: Color(0xFFced842),
+                              endIndent: 100,
+                            ),
+                            Divider(
+                              //height: 10,
+                              thickness: 2,
+                              color: Color(0xFF0000ff),
+                              endIndent: 335,
+                            ),
+                          ],
+                        ),
                       ],
                     ),
+                    SizedBox(height: 50),
                     Text(
                       'Servimos a compañías del sector real, instituciones públicas, organizaciones sin fines de lucro y negocios pequeños de rápido crecimiento',
                       style: TextStyle(
@@ -74,6 +91,7 @@ class AboutContent extends StatelessWidget {
                         //fontWeight: FontWeight.bold,
                       ),
                     ),
+                    SizedBox(height: 50),
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
