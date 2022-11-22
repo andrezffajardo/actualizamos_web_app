@@ -42,7 +42,7 @@ class MyWebPage extends StatelessWidget {
                     children: [
                       CarouselSlider(
                         options: CarouselOptions(
-                          //height: 400.0,
+                          height: 600.0,
                           autoPlay: true,
                           //enlargeCenterPage: true,
                           viewportFraction: 0.99,
@@ -50,7 +50,7 @@ class MyWebPage extends StatelessWidget {
                         items: imageList.map((i) {
                           return Builder(
                             builder: (BuildContext context) {
-                              return Container(
+                              return SizedBox(
                                 width: MediaQuery.of(context).size.width,
                                 child: Stack(
                                   children: [
@@ -132,8 +132,8 @@ class MyWebPage extends StatelessWidget {
                         }).toList(),
                       ),
                       AboutContent(),
-                      HomeContent(),
                       ServicesContent(),
+                      HomeContent(),
                       ContactContent(), //Contain
                       //Contact
                     ],
