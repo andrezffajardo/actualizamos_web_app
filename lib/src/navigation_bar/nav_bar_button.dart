@@ -30,6 +30,7 @@ class NavBarButton extends HookConsumerWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: onTap,
+          highlightColor: Colors.grey.shade200,
           hoverColor: Colors.transparent,
           child: Container(
             decoration: BoxDecoration(

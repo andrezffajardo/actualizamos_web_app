@@ -8,11 +8,13 @@ class ServicesContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         height: 1000,
+        color: Colors.white,
         child: Row(
           children: [
             Column(
               children: [
                 Card(
+                  elevation: 20,
                   child: Container(
                     height: 400,
                     width: 350,
