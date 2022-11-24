@@ -6,6 +6,8 @@ import 'package:actualizamos_web_app/src/navigation_bar/nav_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+import 'content/inter_section.dart';
+
 class MyWebPage extends StatelessWidget {
   List imageList = [
     [
@@ -133,6 +135,7 @@ class MyWebPage extends StatelessWidget {
                       ),
                       AboutContent(),
                       ServicesContent(),
+                      InterSection(),
                       HomeContent(),
                       ContactContent(), //Contain
                       //Contact

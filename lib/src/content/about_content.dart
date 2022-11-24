@@ -8,7 +8,6 @@ class AboutContent extends StatelessWidget {
     return SizedBox(
       height: 600,
       child: Stack(
-        //alignment: AlignmentDirectional.center,
         children: [
           Positioned.fill(
             child: Image(
@@ -16,25 +15,7 @@ class AboutContent extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-
-          //   width: double.infinity,
-          //   decoration: const BoxDecoration(
-          //     image: DecorationImage(
-          //         image: AssetImage('images/fondo-equipo.jpg'),
-          //         fit: BoxFit.cover),
-          //   ),
-          // ),
-
-          // Container(
-          //   width: double.infinity,
-          //   decoration: const BoxDecoration(
-          //     image: DecorationImage(
-          //         image: AssetImage('images/fondo-equipo.jpg'),
-          //         fit: BoxFit.cover),
-          //   ),
-          // ),
           Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
                 child: SizedBox.shrink(),
@@ -53,7 +34,6 @@ class AboutContent extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 18,
                             color: Color(0xFF414141),
-                            //fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
@@ -73,7 +53,6 @@ class AboutContent extends StatelessWidget {
                               endIndent: 100,
                             ),
                             Divider(
-                              //height: 10,
                               thickness: 2,
                               color: Color(0xFF0000ff),
                               endIndent: 335,
@@ -88,7 +67,6 @@ class AboutContent extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         color: Color(0xFF414141),
-                        //fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(height: 50),
