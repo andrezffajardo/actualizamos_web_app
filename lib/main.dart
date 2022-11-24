@@ -8,7 +8,7 @@ void main() {
   runApp(
     ProviderScope(
       child: MaterialApp(
-        title: 'Basic Landing webpage',
+        title: 'Actualizamos - Consultores',
         home: MyWebPage(),
       ),
     ),
