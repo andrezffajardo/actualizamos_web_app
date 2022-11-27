@@ -11,12 +11,12 @@ class FooterContent extends StatelessWidget {
     return Container(
       color: Colors.grey[200],
       height: 400,
-      padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 80.0),
+      padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 60),
       child: Row(
         children: [
           Expanded(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(
                   'images/logo.png',
@@ -116,6 +116,7 @@ class FooterContent extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 20),
                 FooterContentButton(onTap: () {}, text: 'Home'),
                 FooterContentButton(onTap: () {}, text: 'Nosotros'),
                 FooterContentButton(onTap: () {}, text: 'Servicios'),
@@ -158,22 +159,111 @@ class FooterContent extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: [
-                    Icon(
-                      color: Color(0xFF0000ff),
-                      size: 18.0,
-                      FontAwesomeIcons.anglesRight,
-                    ),
-                    Text(
-                      'Consultoría Gerencial',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF414141),
+                SizedBox(height: 20),
+                SizedBox(
+                  height: 40,
+                  child: Row(
+                    children: [
+                      Icon(
+                        color: Color(0xFF0000ff),
+                        size: 18.0,
+                        FontAwesomeIcons.anglesRight,
                       ),
-                    ),
-                  ],
+                      SizedBox(width: 10),
+                      Text(
+                        'Consultoría Gerencial',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF414141),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                  child: Row(
+                    children: [
+                      Icon(
+                        color: Color(0xFF0000ff),
+                        size: 18.0,
+                        FontAwesomeIcons.anglesRight,
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        'Auditoría y Revisoría Fiscal',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF414141),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                  child: Row(
+                    children: [
+                      Icon(
+                        color: Color(0xFF0000ff),
+                        size: 18.0,
+                        FontAwesomeIcons.anglesRight,
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        'Outsourcing Contable',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF414141),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                  child: Row(
+                    children: [
+                      Icon(
+                        color: Color(0xFF0000ff),
+                        size: 18.0,
+                        FontAwesomeIcons.anglesRight,
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        'Impuestos',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF414141),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                  child: Row(
+                    children: [
+                      Icon(
+                        color: Color(0xFF0000ff),
+                        size: 18.0,
+                        FontAwesomeIcons.anglesRight,
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        'NIIF',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF414141),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -213,26 +303,73 @@ class FooterContent extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: [
-                    Icon(
-                      color: Color(0xFF0000ff),
-                      size: 18.0,
-                      FontAwesomeIcons.locationDot,
-                    ),
-                    SizedBox(
-                      height: 200,
-                      width: 100,
-                      child: Text(
-                        'Av. 2 Nte. # 7N-55 Of. 319, Cali, Valle del Cauca, Colombia',
+                SizedBox(height: 20),
+                SizedBox(
+                  height: 60,
+                  child: Row(
+                    children: [
+                      Icon(
+                        color: Color(0xFF0000ff),
+                        size: 18.0,
+                        FontAwesomeIcons.locationDot,
+                      ),
+                      SizedBox(width: 10),
+                      SizedBox(
+                        width: 220,
+                        height: 250,
+                        child: Text(
+                          'Av. 2 Nte. # 7N-55 Of. 319,\nCali, Valle del Cauca,\nColombia.',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFF414141),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 60,
+                  child: Row(
+                    children: [
+                      Icon(
+                        color: Color(0xFF0000ff),
+                        size: 18.0,
+                        FontAwesomeIcons.phone,
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        '+57 2 653 48 68',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
                           color: Color(0xFF414141),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                  child: Row(
+                    children: [
+                      Icon(
+                        color: Color(0xFF0000ff),
+                        size: 18.0,
+                        FontAwesomeIcons.envelope,
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        'info@actualizamos.com.co',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF414141),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

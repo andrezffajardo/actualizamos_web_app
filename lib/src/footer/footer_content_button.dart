@@ -33,8 +33,8 @@ class FooterContentButton extends HookConsumerWidget {
           onTap: onTap,
           highlightColor: Colors.grey.shade200,
           hoverColor: Colors.transparent,
-          child: Container(
-            height: 50,
+          child: SizedBox(
+            height: 40,
             child: Row(
               children: [
                 Icon(
@@ -42,6 +42,7 @@ class FooterContentButton extends HookConsumerWidget {
                   size: 18.0,
                   FontAwesomeIcons.anglesRight,
                 ),
+                SizedBox(width: 10),
                 Text(
                   text,
                   style: TextStyle(
