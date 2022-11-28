@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widget/contact_button.dart';
+
 class AboutContent extends StatelessWidget {
   const AboutContent({super.key});
 
@@ -70,39 +72,7 @@ class AboutContent extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 50),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFced842),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        elevation: 5.0,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Wrap(
-                          children: const <Widget>[
-                            Text(
-                              'CONTACTENOS',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Icon(
-                              Icons.arrow_forward_ios_outlined,
-                              color: Colors.white,
-                              size: 20.0,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    ContactButton(),
                   ],
                 ),
               ),

@@ -1,7 +1,9 @@
+import 'package:actualizamos_web_app/src/my_web_page.dart';
 import 'package:actualizamos_web_app/src/navigation_bar/nav_bar_button.dart';
 import 'package:flutter/material.dart';
-
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../widget/responsive_widget.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
 class NavBar extends ResponsiveWidget {
   const NavBar({super.key});
@@ -17,9 +19,13 @@ class NavBar extends ResponsiveWidget {
   }
 }
 
-class DesktopNavBar extends StatelessWidget {
+class DesktopNavBar extends HookConsumerWidget {
+  const DesktopNavBar({super.key});
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isScrolled = ref.watch(scrolledProvider);
+
     return Container(
       color: Colors.transparent,
       child: Padding(
@@ -34,10 +40,22 @@ class DesktopNavBar extends StatelessWidget {
               width: 50.0,
             ),
             Expanded(child: Container()),
-            NavBarButton(onTap: () {}, text: 'Home'),
-            NavBarButton(onTap: () {}, text: 'Nosotros'),
-            NavBarButton(onTap: () {}, text: 'Servicios'),
-            NavBarButton(onTap: () {}, text: 'Contáctenos'),
+            NavBarButton(
+                onTap: () =>
+                    ref.read(currentPageProvider.state).state = sliderKey,
+                text: 'Home'),
+            NavBarButton(
+                onTap: () =>
+                    ref.read(currentPageProvider.state).state = aboutKey,
+                text: 'Nosotros'),
+            NavBarButton(
+                onTap: () =>
+                    ref.read(currentPageProvider.state).state = servicesKey,
+                text: 'Servicios'),
+            NavBarButton(
+                onTap: () =>
+                    ref.read(currentPageProvider.state).state = contactKey,
+                text: 'Contáctenos'),
             Expanded(child: Container()),
             ElevatedButton(
               onPressed: () {},

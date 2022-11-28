@@ -7,7 +7,7 @@ class ClientsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      height: 300,
+      height: 400,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

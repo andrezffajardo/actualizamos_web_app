@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:actualizamos_web_app/src/my_web_page.dart';
+import 'package:actualizamos_web_app/src/footer/footer_content_button.dart';
 
-import 'footer_content_button.dart';
-
-class FooterContent extends StatelessWidget {
+class FooterContent extends HookConsumerWidget {
   const FooterContent({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isScrolled = ref.watch(scrolledProvider);
     return Container(
       color: Colors.grey[200],
       height: 400,
@@ -117,10 +119,22 @@ class FooterContent extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20),
-                FooterContentButton(onTap: () {}, text: 'Home'),
-                FooterContentButton(onTap: () {}, text: 'Nosotros'),
-                FooterContentButton(onTap: () {}, text: 'Servicios'),
-                FooterContentButton(onTap: () {}, text: 'Contáctenos'),
+                FooterContentButton(
+                    onTap: () =>
+                        ref.read(currentPageProvider.state).state = sliderKey,
+                    text: 'Home'),
+                FooterContentButton(
+                    onTap: () =>
+                        ref.read(currentPageProvider.state).state = aboutKey,
+                    text: 'Nosotros'),
+                FooterContentButton(
+                    onTap: () =>
+                        ref.read(currentPageProvider.state).state = servicesKey,
+                    text: 'Servicios'),
+                FooterContentButton(
+                    onTap: () =>
+                        ref.read(currentPageProvider.state).state = contactKey,
+                    text: 'Contáctenos'),
               ],
             ),
           ),

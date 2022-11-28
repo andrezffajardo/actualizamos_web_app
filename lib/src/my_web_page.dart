@@ -3,16 +3,26 @@ import 'package:actualizamos_web_app/src/content/contact_content.dart';
 import 'package:actualizamos_web_app/src/content/home_content.dart';
 import 'package:actualizamos_web_app/src/content/services_content.dart';
 import 'package:actualizamos_web_app/src/navigation_bar/nav_bar.dart';
+import 'package:actualizamos_web_app/src/widget/contact_button.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'content/clients_section.dart';
 import 'content/exp_content.dart';
 import 'content/signature_section.dart';
 import 'footer/footer_content.dart';
 import 'content/inter_section.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
-class MyWebPage extends StatelessWidget {
+final sliderKey = GlobalKey();
+final aboutKey = GlobalKey();
+final servicesKey = GlobalKey();
+final contactKey = GlobalKey();
+
+final currentPageProvider = StateProvider<GlobalKey>((_) => sliderKey);
+final scrolledProvider = StateProvider<bool>((_) => false);
+
+class MyWebPage extends HookConsumerWidget {
   List imageList = [
     [
       'images/asesor-oficina.jpg',
@@ -30,10 +40,43 @@ class MyWebPage extends StatelessWidget {
 
   //const MyWebPage({super.key});
 
+  // void onScroll(ScrollController controller, WidgetRef ref){
+  // final isScrolled = ref.read(scrolledProvider).state;
+  // if(controller.position.pixels > 5 && !isScrolled) {
+  //   ref.read(scrolledProvider).state = true;
+  // }else if (controller.position.pixels <= 5 && isScrolled) {
+  //   ref.read(scrolledProvider).state= false;
+  // }
+  // }
+
+  void onScroll(ScrollController controller, WidgetRef ref) {
+    final isScrolled = ref.read(scrolledProvider);
+
+    if (controller.position.pixels > 5 && !isScrolled) {
+      ref.read(scrolledProvider.state).state = true;
+    } else if (controller.position.pixels <= 5 && isScrolled) {
+      ref.read(scrolledProvider.state).state = false;
+    }
+  }
+
+  void scrollTo(GlobalKey key) => Scrollable.ensureVisible(key.currentContext!,
+      duration: Duration(seconds: 2));
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final _controller = useScrollController();
+
+    useEffect(() {
+      _controller.addListener(() => onScroll(_controller, ref));
+      return _controller.dispose;
+    }, [_controller]);
+
     double width = MediaQuery.of(context).size.width;
     double maxWidth = width > 1200 ? 1200 : width;
+
+    ref
+        .watch(currentPageProvider.state)
+        .addListener(scrollTo, fireImmediately: false);
 
     return Scaffold(
       body: Center(
@@ -47,6 +90,7 @@ class MyWebPage extends StatelessWidget {
                   child: Column(
                     children: [
                       CarouselSlider(
+                        key: sliderKey,
                         options: CarouselOptions(
                           height: 600.0,
                           autoPlay: true,
@@ -87,45 +131,7 @@ class MyWebPage extends StatelessWidget {
                                             SizedBox(
                                               height: 50,
                                             ),
-                                            ElevatedButton(
-                                              onPressed: () {},
-                                              style: ElevatedButton.styleFrom(
-                                                backgroundColor:
-                                                    Color(0xFFced842),
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          20.0),
-                                                ),
-                                                elevation: 5.0,
-                                              ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(10.0),
-                                                child: Wrap(
-                                                  children: const <Widget>[
-                                                    Text(
-                                                      'CONTACTENOS',
-                                                      style: TextStyle(
-                                                        fontSize: 16,
-                                                        color: Colors.white,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 10,
-                                                    ),
-                                                    Icon(
-                                                      Icons
-                                                          .arrow_forward_ios_outlined,
-                                                      color: Colors.white,
-                                                      size: 20.0,
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
+                                            ContactButton(),
                                           ],
                                         ),
                                       ],
@@ -137,13 +143,12 @@ class MyWebPage extends StatelessWidget {
                           );
                         }).toList(),
                       ),
-                      AboutContent(),
-                      ServicesContent(),
+                      AboutContent(key: aboutKey),
+                      ServicesContent(key: servicesKey),
                       InterSection(),
                       ExpContent(),
-                      HomeContent(),
                       ClientsSection(),
-                      ContactContent(),
+                      ContactContent(key: contactKey),
                       FooterContent(),
                       SignatureSection(), //Contain
                       //Contact

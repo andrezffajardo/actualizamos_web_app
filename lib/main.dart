@@ -8,6 +8,7 @@ void main() {
   runApp(
     ProviderScope(
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Actualizamos - Consultores',
         home: MyWebPage(),
       ),
