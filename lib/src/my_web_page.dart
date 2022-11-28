@@ -6,7 +6,9 @@ import 'package:actualizamos_web_app/src/navigation_bar/nav_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+import 'content/clients_section.dart';
 import 'content/exp_content.dart';
+import 'content/signature_section.dart';
 import 'footer/footer_content.dart';
 import 'content/inter_section.dart';
 
@@ -140,8 +142,10 @@ class MyWebPage extends StatelessWidget {
                       InterSection(),
                       ExpContent(),
                       HomeContent(),
+                      ClientsSection(),
                       ContactContent(),
-                      FooterContent(), //Contain
+                      FooterContent(),
+                      SignatureSection(), //Contain
                       //Contact
                     ],
                   ),
