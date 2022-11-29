@@ -110,42 +110,45 @@ class DesktopAboutContent extends StatelessWidget {
 class MobileAboutContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(24, 24, 24, 5),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            'NOSOTROS SOMOS',
-            style: TextStyle(
-              fontSize: 18,
-              color: Color(0xFF414141),
+    return Container(
+      color: Colors.grey.shade200,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(24, 24, 24, 24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'NOSOTROS SOMOS',
+              style: TextStyle(
+                fontSize: 18,
+                color: Color(0xFF414141),
+              ),
             ),
-          ),
-          Text(
-            'Actualizamos',
-            style: TextStyle(
-              fontSize: 50,
-              color: Color(0xFF0000ff),
-              fontWeight: FontWeight.bold,
+            Text(
+              'Actualizamos',
+              style: TextStyle(
+                fontSize: 50,
+                color: Color(0xFF0000ff),
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          SizedBox(height: 25),
-          Text(
-            'Servimos a compañías del sector real, instituciones públicas, organizaciones sin fines de lucro y negocios pequeños de rápido crecimiento',
-            style: TextStyle(
-              fontSize: 16,
-              color: Color(0xFF414141),
+            SizedBox(height: 25),
+            Text(
+              'Servimos a compañías del sector real, instituciones públicas, organizaciones sin fines de lucro y negocios pequeños de rápido crecimiento',
+              style: TextStyle(
+                fontSize: 16,
+                color: Color(0xFF414141),
+              ),
             ),
-          ),
-          SizedBox(height: 25),
-          ContactButton(),
-          SizedBox(height: 25),
-          Image.asset(
-            'images/img-equipo.png',
-            height: 300,
-          ),
-        ],
+            SizedBox(height: 25),
+            ContactButton(),
+            SizedBox(height: 25),
+            Image.asset(
+              'images/img-equipo.png',
+              height: 300,
+            ),
+          ],
+        ),
       ),
     );
   }

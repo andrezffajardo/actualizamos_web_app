@@ -2,9 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:actualizamos_web_app/src/services/services_card.dart';
 
 import '../widget/contact_button.dart';
+import '../widget/responsive_widget.dart';
 
-class ServicesContent extends StatelessWidget {
+class ServicesContent extends ResponsiveWidget {
   const ServicesContent({super.key});
+
+  @override
+  Widget buildDesktop(BuildContext context) {
+    return DesktopServicesContent();
+  }
+
+  @override
+  Widget buildMobile(BuildContext context) {
+    return MobileServicesContent();
+  }
+}
+
+class DesktopServicesContent extends StatelessWidget {
+  const DesktopServicesContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +128,84 @@ class ServicesContent extends StatelessWidget {
             ],
           )
         ],
+      ),
+    );
+  }
+}
+
+class MobileServicesContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(24, 24, 24, 5),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Card(
+              elevation: 0.0,
+              margin: EdgeInsets.all(20.0),
+              child: SizedBox(
+                height: 400,
+                width: 350,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'NOSOTROS PODEMOS AYUDARLE',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color(0xFF414141),
+                            //fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Consúltenos',
+                          style: TextStyle(
+                            fontSize: 50,
+                            color: Color(0xFF0000ff),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 25),
+                    SizedBox(
+                      height: 60,
+                      width: 300,
+                      child: Text(
+                        'Tenemos todo un equipo a su disposición, para acompañarlo en el crecimiento de su negocio.',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFF414141),
+                          //fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 25),
+                    ContactButton(),
+                  ],
+                ),
+              ),
+            ),
+            ServicesCard(
+                text: 'CONSULTORÍA GERENCIAL', image: 'images/servicios1.jpg'),
+            ServicesCard(
+                text: 'OUTSOURCING CONTABLE', image: 'images/servicios5.jpg'),
+            ServicesCard(
+                text: 'AUDITORÍA Y REVISORÍA FISCAL',
+                image: 'images/servicios2.jpg'),
+            ServicesCard(text: 'IMPUESTOS', image: 'images/servicios3.jpg'),
+            ServicesCard(
+                text: 'NORMAS INTERNACIONALES DE INFORMACION FINANCIERA - NIIF',
+                image: 'images/servicios4.jpg'),
+          ],
+        ),
       ),
     );
   }
