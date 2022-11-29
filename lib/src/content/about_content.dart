@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../widget/contact_button.dart';
 import '../widget/responsive_widget.dart';
 
@@ -27,7 +26,7 @@ class DesktopAboutContent extends StatelessWidget {
       height: height * .75,
       child: Stack(
         children: [
-          Positioned.fill(
+          const Positioned.fill(
             child: Image(
               image: AssetImage('images/fondo-equipo.jpg'),
               fit: BoxFit.fill,
@@ -35,7 +34,7 @@ class DesktopAboutContent extends StatelessWidget {
           ),
           Row(
             children: [
-              Expanded(
+              const Expanded(
                 child: SizedBox.shrink(),
               ),
               Expanded(
@@ -47,14 +46,14 @@ class DesktopAboutContent extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           'NOSOTROS SOMOS',
                           style: TextStyle(
                             fontSize: 18,
                             color: Color(0xFF414141),
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Actualizamos',
                           style: TextStyle(
                             fontSize: 50,
@@ -63,7 +62,7 @@ class DesktopAboutContent extends StatelessWidget {
                           ),
                         ),
                         Stack(
-                          children: [
+                          children: const [
                             Divider(
                               height: 15,
                               thickness: 1,
@@ -79,26 +78,26 @@ class DesktopAboutContent extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 50),
-                    Text(
+                    const SizedBox(height: 50),
+                    const Text(
                       'Servimos a compañías del sector real, instituciones públicas, organizaciones sin fines de lucro y negocios pequeños de rápido crecimiento',
                       style: TextStyle(
                         fontSize: 16,
                         color: Color(0xFF414141),
                       ),
                     ),
-                    SizedBox(height: 50),
-                    ContactButton(),
+                    const SizedBox(height: 50),
+                    const ContactButton(),
                   ],
                 ),
               ),
-              Expanded(child: SizedBox.shrink()),
+              const Expanded(child: SizedBox.shrink()),
               Image.asset(
                 'images/img-equipo.png',
                 //height: 400,
                 width: width * .3,
               ),
-              Expanded(child: SizedBox.shrink()),
+              const Expanded(child: SizedBox.shrink()),
             ],
           )
         ],
@@ -117,14 +116,14 @@ class MobileAboutContent extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'NOSOTROS SOMOS',
               style: TextStyle(
                 fontSize: 18,
                 color: Color(0xFF414141),
               ),
             ),
-            Text(
+            const Text(
               'Actualizamos',
               style: TextStyle(
                 fontSize: 50,
@@ -132,17 +131,17 @@ class MobileAboutContent extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 25),
-            Text(
+            const SizedBox(height: 25),
+            const Text(
               'Servimos a compañías del sector real, instituciones públicas, organizaciones sin fines de lucro y negocios pequeños de rápido crecimiento',
               style: TextStyle(
                 fontSize: 16,
                 color: Color(0xFF414141),
               ),
             ),
-            SizedBox(height: 25),
-            ContactButton(),
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
+            const ContactButton(),
+            const SizedBox(height: 25),
             Image.asset('images/img-equipo.png', height: 300),
           ],
         ),
