@@ -95,15 +95,6 @@ class DesktopNavBar extends HookConsumerWidget {
                 ),
               ),
             ),
-            // ElevatedButton.icon(
-            //   onPressed: () {},
-            //   label: Text('+57 2 653 48 68'),
-            //   icon: Icon(Icons.call),
-            //   style: ElevatedButton.styleFrom(
-            //     backgroundColor: Color(0xFFced842),
-            //     textStyle: TextStyle(color: Colors.red),
-            //   ),
-            // ),
           ],
         ),
       ),
@@ -111,9 +102,89 @@ class DesktopNavBar extends HookConsumerWidget {
   }
 }
 
-class MovileNavBar extends StatelessWidget {
+class MovileNavBar extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    return Container();
+  Widget build(BuildContext context, WidgetRef ref) {
+    final containerHeight = useState<double>(0.0);
+
+    final isScrolled = ref.watch(scrolledProvider);
+    final navBarColor = isScrolled ? Colors.grey.shade200 : Colors.white;
+
+    return Stack(children: [
+      AnimatedContainer(
+        margin: EdgeInsets.only(top: 120.0),
+        curve: Curves.ease,
+        duration: Duration(milliseconds: 400),
+        height: containerHeight.value,
+        child: SingleChildScrollView(
+            child: Column(
+          children: [
+            NavBarButton(
+                onTap: () {
+                  ref.read(currentPageProvider.state).state = sliderKey;
+                  containerHeight.value = 0;
+                },
+                text: 'Home'),
+            NavBarButton(
+                onTap: () {
+                  ref.read(currentPageProvider.state).state = aboutKey;
+                  containerHeight.value = 0;
+                },
+                text: 'Nosotros'),
+            NavBarButton(
+                onTap: () {
+                  ref.read(currentPageProvider.state).state = servicesKey;
+                  containerHeight.value = 0;
+                },
+                text: 'Servicios'),
+            NavBarButton(
+                onTap: () {
+                  ref.read(currentPageProvider.state).state = clientsKey;
+                  containerHeight.value = 0;
+                },
+                text: 'Clientes'),
+            NavBarButton(
+                onTap: () {
+                  ref.read(currentPageProvider.state).state = contactKey;
+                  containerHeight.value = 0;
+                },
+                text: 'Contáctenos'),
+          ],
+        )),
+      ),
+      Container(
+        color: navBarColor,
+        child: Padding(
+          padding: EdgeInsets.all(10),
+          child: Row(
+            children: [
+              Image.asset(
+                'images/logo.png',
+                height: 120.0,
+              ),
+              SizedBox(
+                width: 50.0,
+              ),
+              Expanded(child: Container()),
+              Material(
+                child: InkWell(
+                  splashColor: Colors.white60,
+                  onTap: () {
+                    final height = containerHeight.value > 0 ? 0.0 : 240.0;
+                    containerHeight.value = height;
+                  },
+                  child: Icon(
+                    Icons.menu,
+                    size: 30,
+                    color: Colors.black54,
+                  ),
+                ),
+              ),
+              Expanded(child: Container()),
+            ],
+          ),
+        ),
+      ),
+    ]);
   }
 }
