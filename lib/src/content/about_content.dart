@@ -1,14 +1,30 @@
 import 'package:flutter/material.dart';
-
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../widget/contact_button.dart';
+import '../widget/responsive_widget.dart';
 
-class AboutContent extends StatelessWidget {
+class AboutContent extends ResponsiveWidget {
   const AboutContent({super.key});
 
   @override
+  Widget buildDesktop(BuildContext context) {
+    return DesktopAboutContent();
+  }
+
+  @override
+  Widget buildMobile(BuildContext context) {
+    return MobileAboutContent();
+  }
+}
+
+class DesktopAboutContent extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     return SizedBox(
-      height: 600,
+      height: height * .75,
       child: Stack(
         children: [
           Positioned.fill(
@@ -79,14 +95,55 @@ class AboutContent extends StatelessWidget {
               Expanded(child: SizedBox.shrink()),
               Image.asset(
                 'images/img-equipo.png',
-                height: 400,
-                width: 400,
+                //height: 400,
+                width: width * .3,
               ),
               Expanded(child: SizedBox.shrink()),
             ],
           )
         ],
       ),
+    );
+  }
+}
+
+class MobileAboutContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(24, 24, 24, 5),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        Text(
+          'NOSOTROS SOMOS',
+          style: TextStyle(
+            fontSize: 18,
+            color: Color(0xFF414141),
+          ),
+        ),
+        Text(
+          'Actualizamos',
+          style: TextStyle(
+            fontSize: 50,
+            color: Color(0xFF0000ff),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 25),
+        Text(
+          'Servimos a compañías del sector real, instituciones públicas, organizaciones sin fines de lucro y negocios pequeños de rápido crecimiento',
+          style: TextStyle(
+            fontSize: 16,
+            color: Color(0xFF414141),
+          ),
+        ),
+        SizedBox(height: 25),
+        ContactButton(),
+        SizedBox(height: 25),
+        Image.asset(
+          'images/img-equipo.png',
+          height: 300,
+        ),
+      ]),
     );
   }
 }
