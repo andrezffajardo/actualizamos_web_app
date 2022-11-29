@@ -1,9 +1,24 @@
 import 'package:flutter/material.dart';
 
 import '../widget/contact_button.dart';
+import '../widget/responsive_widget.dart';
 
-class InterSection extends StatelessWidget {
+class InterSection extends ResponsiveWidget {
   const InterSection({super.key});
+
+  @override
+  Widget buildDesktop(BuildContext context) {
+    return DesktopInterSection();
+  }
+
+  @override
+  Widget buildMobile(BuildContext context) {
+    return MobileInterSection();
+  }
+}
+
+class DesktopInterSection extends StatelessWidget {
+  const DesktopInterSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +57,42 @@ class InterSection extends StatelessWidget {
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+class MobileInterSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.grey.shade200,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(24, 35, 24, 35),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'TENEMOS RÁPIDAS SOLUCIONES',
+              style: TextStyle(
+                fontSize: 18,
+                color: Color(0xFF414141),
+              ),
+            ),
+            Align(
+              child: Text(
+                '¿Necesita que le\n asesoremos ya?',
+                style: TextStyle(
+                  fontSize: 50,
+                  color: Color(0xFF0000ff),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(height: 25),
+            ContactButton(),
+          ],
+        ),
       ),
     );
   }

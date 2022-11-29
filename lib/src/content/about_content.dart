@@ -143,10 +143,7 @@ class MobileAboutContent extends StatelessWidget {
             SizedBox(height: 25),
             ContactButton(),
             SizedBox(height: 25),
-            Image.asset(
-              'images/img-equipo.png',
-              height: 300,
-            ),
+            Image.asset('images/img-equipo.png', height: 300),
           ],
         ),
       ),
