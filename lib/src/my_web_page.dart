@@ -16,6 +16,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 final sliderKey = GlobalKey();
 final aboutKey = GlobalKey();
 final servicesKey = GlobalKey();
+final clientsKey = GlobalKey();
 final contactKey = GlobalKey();
 
 final currentPageProvider = StateProvider<GlobalKey>((_) => sliderKey);
@@ -71,6 +72,7 @@ class MyWebPage extends HookConsumerWidget {
               NavBar(),
               Expanded(
                 child: SingleChildScrollView(
+                  controller: _controller,
                   child: Column(
                     children: [
                       Carousel(key: sliderKey),
@@ -78,7 +80,7 @@ class MyWebPage extends HookConsumerWidget {
                       ServicesContent(key: servicesKey),
                       InterSection(),
                       ExpContent(),
-                      ClientsSection(),
+                      ClientsSection(key: clientsKey),
                       ContactContent(key: contactKey),
                       FooterContent(),
                       SignatureSection(), //Contain

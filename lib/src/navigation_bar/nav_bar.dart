@@ -25,9 +25,10 @@ class DesktopNavBar extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isScrolled = ref.watch(scrolledProvider);
+    final navBarColor = isScrolled ? Colors.grey.shade200 : Colors.white;
 
     return Container(
-      color: Colors.transparent,
+      color: navBarColor,
       child: Padding(
         padding: EdgeInsets.all(10),
         child: Row(
@@ -52,6 +53,10 @@ class DesktopNavBar extends HookConsumerWidget {
                 onTap: () =>
                     ref.read(currentPageProvider.state).state = servicesKey,
                 text: 'Servicios'),
+            NavBarButton(
+                onTap: () =>
+                    ref.read(currentPageProvider.state).state = clientsKey,
+                text: 'Clientes'),
             NavBarButton(
                 onTap: () =>
                     ref.read(currentPageProvider.state).state = contactKey,
