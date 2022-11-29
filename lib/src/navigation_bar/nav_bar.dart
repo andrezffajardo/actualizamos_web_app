@@ -112,7 +112,7 @@ class MovileNavBar extends HookConsumerWidget {
 
     return Stack(children: [
       AnimatedContainer(
-        margin: EdgeInsets.only(top: 120.0),
+        margin: EdgeInsets.only(top: 130.0),
         curve: Curves.ease,
         duration: Duration(milliseconds: 400),
         height: containerHeight.value,
