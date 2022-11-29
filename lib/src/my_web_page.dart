@@ -3,8 +3,7 @@ import 'package:actualizamos_web_app/src/content/contact_content.dart';
 import 'package:actualizamos_web_app/src/content/home_content.dart';
 import 'package:actualizamos_web_app/src/content/services_content.dart';
 import 'package:actualizamos_web_app/src/navigation_bar/nav_bar.dart';
-import 'package:actualizamos_web_app/src/widget/contact_button.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:actualizamos_web_app/src/widget/carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'content/clients_section.dart';
@@ -23,21 +22,6 @@ final currentPageProvider = StateProvider<GlobalKey>((_) => sliderKey);
 final scrolledProvider = StateProvider<bool>((_) => false);
 
 class MyWebPage extends HookConsumerWidget {
-  List imageList = [
-    [
-      'images/asesor-oficina.jpg',
-      'OUTSOURCING CONTABLE',
-    ],
-    [
-      'images/asesora-oficina.jpg',
-      'AUDITORIA Y REVISORIA FISCAL',
-    ],
-    [
-      'images/asesora2-oficina.jpg',
-      'CONSULTORIA GERENCIAL',
-    ],
-  ];
-
   //const MyWebPage({super.key});
 
   // void onScroll(ScrollController controller, WidgetRef ref){
@@ -89,60 +73,7 @@ class MyWebPage extends HookConsumerWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      CarouselSlider(
-                        key: sliderKey,
-                        options: CarouselOptions(
-                          height: 600.0,
-                          autoPlay: true,
-                          //enlargeCenterPage: true,
-                          viewportFraction: 0.99,
-                        ),
-                        items: imageList.map((i) {
-                          return Builder(
-                            builder: (BuildContext context) {
-                              return SizedBox(
-                                width: MediaQuery.of(context).size.width,
-                                child: Stack(
-                                  children: [
-                                    Image.asset(
-                                      i[0],
-                                      fit: BoxFit.cover,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsets.symmetric(
-                                                  vertical: 5.0,
-                                                  horizontal: 20.0),
-                                              child: Text(
-                                                i[1],
-                                                style: TextStyle(
-                                                  color: Color(0xFF0000ff),
-                                                  fontSize: 40.0,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 50,
-                                            ),
-                                            ContactButton(),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              );
-                            },
-                          );
-                        }).toList(),
-                      ),
+                      Carousel(key: sliderKey),
                       AboutContent(key: aboutKey),
                       ServicesContent(key: servicesKey),
                       InterSection(),
@@ -163,3 +94,83 @@ class MyWebPage extends HookConsumerWidget {
     );
   }
 }
+
+// class Carousel extends StatelessWidget {
+//   const Carousel({
+//     Key? key,
+//     required this.imageList,
+//   }) : super(key: key);
+
+//   List imageList = [
+//     [
+//       'images/asesor-oficina.jpg',
+//       'OUTSOURCING CONTABLE',
+//     ],
+//     [
+//       'images/asesora-oficina.jpg',
+//       'AUDITORIA Y REVISORIA FISCAL',
+//     ],
+//     [
+//       'images/asesora2-oficina.jpg',
+//       'CONSULTORIA GERENCIAL',
+//     ],
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return CarouselSlider(
+//       key: sliderKey,
+//       options: CarouselOptions(
+//         height: 600.0,
+//         autoPlay: true,
+//         //enlargeCenterPage: true,
+//         viewportFraction: 0.99,
+//       ),
+//       items: imageList.map((i) {
+//         return Builder(
+//           builder: (BuildContext context) {
+//             return SizedBox(
+//               width: MediaQuery.of(context).size.width,
+//               child: Stack(
+//                 children: [
+//                   Image.asset(
+//                     i[0],
+//                     fit: BoxFit.cover,
+//                   ),
+//                   Row(
+//                     mainAxisAlignment: MainAxisAlignment.end,
+//                     children: [
+//                       Column(
+//                         mainAxisAlignment:
+//                             MainAxisAlignment.center,
+//                         children: [
+//                           Padding(
+//                             padding: EdgeInsets.symmetric(
+//                                 vertical: 5.0,
+//                                 horizontal: 20.0),
+//                             child: Text(
+//                               i[1],
+//                               style: TextStyle(
+//                                 color: Color(0xFF0000ff),
+//                                 fontSize: 40.0,
+//                                 fontWeight: FontWeight.bold,
+//                               ),
+//                             ),
+//                           ),
+//                           SizedBox(
+//                             height: 50,
+//                           ),
+//                           ContactButton(),
+//                         ],
+//                       ),
+//                     ],
+//                   ),
+//                 ],
+//               ),
+//             );
+//           },
+//         );
+//       }).toList(),
+//     );
+//   }
+// }
