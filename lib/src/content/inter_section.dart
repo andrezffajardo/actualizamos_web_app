@@ -34,7 +34,7 @@ class DesktopInterSection extends StatelessWidget {
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
                     'TENEMOS RÁPIDAS SOLUCIONES',
                     style: TextStyle(
@@ -52,8 +52,8 @@ class DesktopInterSection extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 50),
-              ContactButton(),
+              const SizedBox(height: 50),
+              const ContactButton(),
             ],
           ),
         ],
@@ -71,7 +71,7 @@ class MobileInterSection extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(24, 35, 24, 35),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: const [
             Text(
               'TENEMOS RÁPIDAS SOLUCIONES',
               style: TextStyle(
