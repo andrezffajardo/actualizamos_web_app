@@ -649,7 +649,7 @@ class MobileFooterContent extends HookConsumerWidget {
                   backgroundColor:
                       MaterialStatePropertyAll<Color>(Colors.grey.shade500),
                   shape: MaterialStatePropertyAll(CircleBorder()),
-                  padding: MaterialStatePropertyAll(EdgeInsets.all(15.0)),
+                  padding: MaterialStatePropertyAll(EdgeInsets.all(13.0)),
                   elevation: MaterialStatePropertyAll(5.0),
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                     (Set<MaterialState> states) {
@@ -667,7 +667,7 @@ class MobileFooterContent extends HookConsumerWidget {
                   backgroundColor:
                       MaterialStatePropertyAll<Color>(Colors.grey.shade500),
                   shape: MaterialStatePropertyAll(CircleBorder()),
-                  padding: MaterialStatePropertyAll(EdgeInsets.all(15.0)),
+                  padding: MaterialStatePropertyAll(EdgeInsets.all(13.0)),
                   elevation: MaterialStatePropertyAll(5.0),
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                     (Set<MaterialState> states) {
@@ -685,7 +685,7 @@ class MobileFooterContent extends HookConsumerWidget {
                   backgroundColor:
                       MaterialStatePropertyAll<Color>(Colors.grey.shade500),
                   shape: MaterialStatePropertyAll(CircleBorder()),
-                  padding: MaterialStatePropertyAll(EdgeInsets.all(15.0)),
+                  padding: MaterialStatePropertyAll(EdgeInsets.all(13.0)),
                   elevation: MaterialStatePropertyAll(5.0),
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                     (Set<MaterialState> states) {
