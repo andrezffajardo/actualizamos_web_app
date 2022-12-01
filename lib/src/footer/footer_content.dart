@@ -3,8 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:actualizamos_web_app/src/my_web_page.dart';
 import 'package:actualizamos_web_app/src/footer/footer_content_button.dart';
-
-import '../widget/contact_button.dart';
 import '../widget/responsive_widget.dart';
 
 class FooterContent extends ResponsiveWidget {
@@ -30,7 +28,7 @@ class DesktopFooterContent extends HookConsumerWidget {
     return Container(
       color: Colors.grey[200],
       height: 400,
-      padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 60),
+      padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 60),
       child: Row(
         children: [
           Expanded(
@@ -48,13 +46,15 @@ class DesktopFooterContent extends HookConsumerWidget {
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll<Color>(Colors.grey.shade500),
-                      shape: MaterialStatePropertyAll(CircleBorder()),
-                      padding: MaterialStatePropertyAll(EdgeInsets.all(15.0)),
-                      elevation: MaterialStatePropertyAll(5.0),
+                      shape: const MaterialStatePropertyAll(CircleBorder()),
+                      padding:
+                          const MaterialStatePropertyAll(EdgeInsets.all(15.0)),
+                      elevation: const MaterialStatePropertyAll(5.0),
                       overlayColor: MaterialStateProperty.resolveWith<Color?>(
                         (Set<MaterialState> states) {
-                          if (states.contains(MaterialState.hovered))
-                            return Color(0xFFced842); //<-- SEE HERE
+                          if (states.contains(MaterialState.hovered)) {
+                            return const Color(0xFFced842);
+                          } //<-- SEE HERE
                           return null; // Defer to the widget's default.
                         },
                       ),
@@ -66,13 +66,15 @@ class DesktopFooterContent extends HookConsumerWidget {
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll<Color>(Colors.grey.shade500),
-                      shape: MaterialStatePropertyAll(CircleBorder()),
-                      padding: MaterialStatePropertyAll(EdgeInsets.all(15.0)),
-                      elevation: MaterialStatePropertyAll(5.0),
+                      shape: const MaterialStatePropertyAll(CircleBorder()),
+                      padding:
+                          const MaterialStatePropertyAll(EdgeInsets.all(15.0)),
+                      elevation: const MaterialStatePropertyAll(5.0),
                       overlayColor: MaterialStateProperty.resolveWith<Color?>(
                         (Set<MaterialState> states) {
-                          if (states.contains(MaterialState.hovered))
-                            return Color(0xFFced842); //<-- SEE HERE
+                          if (states.contains(MaterialState.hovered)) {
+                            return const Color(0xFFced842);
+                          } //<-- SEE HERE
                           return null; // Defer to the widget's default.
                         },
                       ),
@@ -84,13 +86,15 @@ class DesktopFooterContent extends HookConsumerWidget {
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll<Color>(Colors.grey.shade500),
-                      shape: MaterialStatePropertyAll(CircleBorder()),
-                      padding: MaterialStatePropertyAll(EdgeInsets.all(15.0)),
-                      elevation: MaterialStatePropertyAll(5.0),
+                      shape: const MaterialStatePropertyAll(CircleBorder()),
+                      padding:
+                          const MaterialStatePropertyAll(EdgeInsets.all(15.0)),
+                      elevation: const MaterialStatePropertyAll(5.0),
                       overlayColor: MaterialStateProperty.resolveWith<Color?>(
                         (Set<MaterialState> states) {
-                          if (states.contains(MaterialState.hovered))
-                            return Color(0xFFced842);
+                          if (states.contains(MaterialState.hovered)) {
+                            return const Color(0xFFced842);
+                          }
                           return null;
                         },
                       ),
@@ -104,7 +108,7 @@ class DesktopFooterContent extends HookConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Navega',
                   style: TextStyle(
                     fontSize: 30,
@@ -113,7 +117,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                   ),
                 ),
                 Stack(
-                  children: [
+                  children: const [
                     SizedBox(
                       height: 10,
                       width: 200,
@@ -135,7 +139,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 FooterContentButton(
                     onTap: () =>
                         ref.read(currentPageProvider.state).state = sliderKey,
@@ -159,7 +163,7 @@ class DesktopFooterContent extends HookConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Servicios',
                   style: TextStyle(
                     fontSize: 30,
@@ -168,7 +172,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                   ),
                 ),
                 Stack(
-                  children: [
+                  children: const [
                     SizedBox(
                       height: 10,
                       width: 200,
@@ -190,11 +194,11 @@ class DesktopFooterContent extends HookConsumerWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 SizedBox(
                   height: 40,
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         color: Color(0xFF0000ff),
                         size: 18.0,
@@ -215,7 +219,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                 SizedBox(
                   height: 40,
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         color: Color(0xFF0000ff),
                         size: 18.0,
@@ -236,7 +240,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                 SizedBox(
                   height: 40,
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         color: Color(0xFF0000ff),
                         size: 18.0,
@@ -257,7 +261,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                 SizedBox(
                   height: 40,
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         color: Color(0xFF0000ff),
                         size: 18.0,
@@ -278,7 +282,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                 SizedBox(
                   height: 40,
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         color: Color(0xFF0000ff),
                         size: 18.0,
@@ -303,7 +307,7 @@ class DesktopFooterContent extends HookConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Contacto',
                   style: TextStyle(
                     fontSize: 30,
@@ -312,7 +316,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                   ),
                 ),
                 Stack(
-                  children: [
+                  children: const [
                     SizedBox(
                       height: 10,
                       width: 200,
@@ -334,11 +338,11 @@ class DesktopFooterContent extends HookConsumerWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 SizedBox(
                   height: 60,
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         color: Color(0xFF0000ff),
                         size: 18.0,
@@ -363,7 +367,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                 SizedBox(
                   height: 60,
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         color: Color(0xFF0000ff),
                         size: 18.0,
@@ -384,7 +388,7 @@ class DesktopFooterContent extends HookConsumerWidget {
                 SizedBox(
                   height: 40,
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         color: Color(0xFF0000ff),
                         size: 18.0,
@@ -422,8 +426,8 @@ class MobileFooterContent extends HookConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset('images/logo.png', height: 80.0),
-            SizedBox(height: 25),
-            Text(
+            const SizedBox(height: 25),
+            const Text(
               'Navega',
               style: TextStyle(
                 fontSize: 30,
@@ -431,7 +435,7 @@ class MobileFooterContent extends HookConsumerWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             FooterContentButton(
                 onTap: () =>
                     ref.read(currentPageProvider.state).state = sliderKey,
@@ -448,8 +452,8 @@ class MobileFooterContent extends HookConsumerWidget {
                 onTap: () =>
                     ref.read(currentPageProvider.state).state = contactKey,
                 text: 'Contáctenos'),
-            SizedBox(height: 25),
-            Text(
+            const SizedBox(height: 25),
+            const Text(
               'Servicios',
               style: TextStyle(
                 fontSize: 30,
@@ -457,11 +461,11 @@ class MobileFooterContent extends HookConsumerWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               height: 40,
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     color: Color(0xFF0000ff),
                     size: 18.0,
@@ -482,7 +486,7 @@ class MobileFooterContent extends HookConsumerWidget {
             SizedBox(
               height: 40,
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     color: Color(0xFF0000ff),
                     size: 18.0,
@@ -503,7 +507,7 @@ class MobileFooterContent extends HookConsumerWidget {
             SizedBox(
               height: 40,
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     color: Color(0xFF0000ff),
                     size: 18.0,
@@ -524,7 +528,7 @@ class MobileFooterContent extends HookConsumerWidget {
             SizedBox(
               height: 40,
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     color: Color(0xFF0000ff),
                     size: 18.0,
@@ -545,7 +549,7 @@ class MobileFooterContent extends HookConsumerWidget {
             SizedBox(
               height: 40,
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     color: Color(0xFF0000ff),
                     size: 18.0,
@@ -563,8 +567,8 @@ class MobileFooterContent extends HookConsumerWidget {
                 ],
               ),
             ),
-            SizedBox(height: 25),
-            Text(
+            const SizedBox(height: 25),
+            const Text(
               'Contacto',
               style: TextStyle(
                 fontSize: 30,
@@ -572,11 +576,11 @@ class MobileFooterContent extends HookConsumerWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               height: 60,
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     color: Color(0xFF0000ff),
                     size: 18.0,
@@ -601,7 +605,7 @@ class MobileFooterContent extends HookConsumerWidget {
             SizedBox(
               height: 60,
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     color: Color(0xFF0000ff),
                     size: 18.0,
@@ -622,7 +626,7 @@ class MobileFooterContent extends HookConsumerWidget {
             SizedBox(
               height: 40,
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     color: Color(0xFF0000ff),
                     size: 18.0,
@@ -640,7 +644,7 @@ class MobileFooterContent extends HookConsumerWidget {
                 ],
               ),
             ),
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               ElevatedButton(
                 onPressed: () {},
@@ -648,13 +652,14 @@ class MobileFooterContent extends HookConsumerWidget {
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStatePropertyAll<Color>(Colors.grey.shade500),
-                  shape: MaterialStatePropertyAll(CircleBorder()),
-                  padding: MaterialStatePropertyAll(EdgeInsets.all(13.0)),
-                  elevation: MaterialStatePropertyAll(5.0),
+                  shape: const MaterialStatePropertyAll(CircleBorder()),
+                  padding: const MaterialStatePropertyAll(EdgeInsets.all(13.0)),
+                  elevation: const MaterialStatePropertyAll(5.0),
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                     (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.hovered))
-                        return Color(0xFFced842); //<-- SEE HERE
+                      if (states.contains(MaterialState.hovered)) {
+                        return const Color(0xFFced842);
+                      } //<-- SEE HERE
                       return null; // Defer to the widget's default.
                     },
                   ),
@@ -666,13 +671,14 @@ class MobileFooterContent extends HookConsumerWidget {
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStatePropertyAll<Color>(Colors.grey.shade500),
-                  shape: MaterialStatePropertyAll(CircleBorder()),
-                  padding: MaterialStatePropertyAll(EdgeInsets.all(13.0)),
-                  elevation: MaterialStatePropertyAll(5.0),
+                  shape: const MaterialStatePropertyAll(CircleBorder()),
+                  padding: const MaterialStatePropertyAll(EdgeInsets.all(13.0)),
+                  elevation: const MaterialStatePropertyAll(5.0),
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                     (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.hovered))
-                        return Color(0xFFced842); //<-- SEE HERE
+                      if (states.contains(MaterialState.hovered)) {
+                        return const Color(0xFFced842);
+                      } //<-- SEE HERE
                       return null; // Defer to the widget's default.
                     },
                   ),
@@ -684,13 +690,14 @@ class MobileFooterContent extends HookConsumerWidget {
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStatePropertyAll<Color>(Colors.grey.shade500),
-                  shape: MaterialStatePropertyAll(CircleBorder()),
-                  padding: MaterialStatePropertyAll(EdgeInsets.all(13.0)),
-                  elevation: MaterialStatePropertyAll(5.0),
+                  shape: const MaterialStatePropertyAll(CircleBorder()),
+                  padding: const MaterialStatePropertyAll(EdgeInsets.all(13.0)),
+                  elevation: const MaterialStatePropertyAll(5.0),
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                     (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.hovered))
-                        return Color(0xFFced842);
+                      if (states.contains(MaterialState.hovered)) {
+                        return const Color(0xFFced842);
+                      }
                       return null;
                     },
                   ),
