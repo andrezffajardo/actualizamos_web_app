@@ -147,7 +147,7 @@ class MobileServicesContent extends StatelessWidget {
               elevation: 0.0,
               margin: EdgeInsets.all(20.0),
               child: SizedBox(
-                height: 400,
+                height: 250,
                 width: 350,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
