@@ -130,7 +130,7 @@ class MobileClientsSection extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(width: 50.0),
+                SizedBox(width: 24.0),
                 Container(
                   padding: const EdgeInsets.all(1.0),
                   decoration: BoxDecoration(
@@ -148,9 +148,7 @@ class MobileClientsSection extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 50.0,
-                ),
+                SizedBox(width: 40.0),
                 Image.asset(
                   'images/Logo_Fund_Activa.png',
                   height: 30.0,
@@ -165,9 +163,7 @@ class MobileClientsSection extends StatelessWidget {
                   'images/LogoSJ.jpg',
                   height: 50.0,
                 ),
-                SizedBox(
-                  width: 50.0,
-                ),
+                SizedBox(width: 50.0),
                 Image.asset(
                   'images/Logo-creditos-suministros.jpg',
                   height: 45.0,
