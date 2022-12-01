@@ -118,7 +118,7 @@ class MobileClientsSection extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                'Ellos creyeron en\n nosotros',
+                'Ellos creyeron\n en nosotros',
                 style: TextStyle(
                   fontSize: 38,
                   color: Color(0xFF0000ff),
@@ -126,7 +126,7 @@ class MobileClientsSection extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 25),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
