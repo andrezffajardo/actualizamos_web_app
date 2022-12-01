@@ -30,14 +30,14 @@ class DesktopNavBar extends HookConsumerWidget {
     return Container(
       color: navBarColor,
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Row(
           children: [
             Image.asset(
               'images/logo.png',
               height: 120.0,
             ),
-            SizedBox(
+            const SizedBox(
               width: 50.0,
             ),
             Expanded(child: Container()),
@@ -65,7 +65,7 @@ class DesktopNavBar extends HookConsumerWidget {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFced842),
+                backgroundColor: const Color(0xFFced842),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
@@ -74,7 +74,7 @@ class DesktopNavBar extends HookConsumerWidget {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Wrap(
-                  children: <Widget>[
+                  children: const <Widget>[
                     Icon(
                       Icons.call,
                       color: Color(0xFF0000ff),
@@ -112,9 +112,9 @@ class MovileNavBar extends HookConsumerWidget {
 
     return Stack(children: [
       AnimatedContainer(
-        margin: EdgeInsets.only(top: 100.0),
+        margin: const EdgeInsets.only(top: 100.0),
         curve: Curves.ease,
-        duration: Duration(milliseconds: 400),
+        duration: const Duration(milliseconds: 400),
         height: containerHeight.value,
         child: SingleChildScrollView(
             child: Column(
@@ -155,15 +155,15 @@ class MovileNavBar extends HookConsumerWidget {
       Container(
         color: navBarColor,
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Row(
             children: [
-              SizedBox(width: 30.0),
+              const SizedBox(width: 30.0),
               Image.asset(
                 'images/logo.png',
                 height: 80.0,
               ),
-              SizedBox(width: 30.0),
+              const SizedBox(width: 30.0),
               Expanded(child: Container()),
               Material(
                 child: InkWell(
@@ -172,7 +172,7 @@ class MovileNavBar extends HookConsumerWidget {
                     final height = containerHeight.value > 0 ? 0.0 : 240.0;
                     containerHeight.value = height;
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.menu,
                     size: 30,
                     color: Colors.black54,
