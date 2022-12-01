@@ -1,8 +1,6 @@
 import 'package:actualizamos_web_app/src/widget/responsive_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:actualizamos_web_app/src/my_web_page.dart';
-
 import 'contact_button.dart';
 
 class Carousel extends ResponsiveWidget {
@@ -66,21 +64,21 @@ class DesktopCarousel extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 5.0, horizontal: 20.0),
                             child: Text(
                               i[1],
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Color(0xFF0000ff),
                                 fontSize: 40.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 50,
                           ),
-                          ContactButton(),
+                          const ContactButton(),
                         ],
                       ),
                     ],
@@ -138,21 +136,21 @@ class MobileCarousel extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 5.0, horizontal: 10.0),
                             child: Text(
                               i[1],
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Color(0xFF0000ff),
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           ),
-                          ContactButton(),
+                          const ContactButton(),
                         ],
                       ),
                     ],
