@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../widget/contact_button.dart';
 import '../widget/responsive_widget.dart';
 
 class ContactContent extends ResponsiveWidget {
@@ -42,7 +40,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
       height: 800,
       child: Stack(
         children: [
-          Positioned.fill(
+          const Positioned.fill(
             child: Image(
               image: AssetImage('images/formulario-imagen.jpg'),
               fit: BoxFit.fill,
@@ -61,14 +59,14 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               'SI DESEA MÁS INFORMACIÓN',
                               style: TextStyle(
                                 fontSize: 18,
                                 color: Color(0xFF414141),
                               ),
                             ),
-                            Text(
+                            const Text(
                               'Contáctenos',
                               style: TextStyle(
                                 fontSize: 50,
@@ -77,7 +75,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                               ),
                             ),
                             Stack(
-                              children: [
+                              children: const [
                                 Divider(
                                   height: 15,
                                   thickness: 1,
@@ -93,19 +91,19 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 50),
-                        Text(
+                        const SizedBox(height: 50),
+                        const Text(
                           'Queremos Atenderle y resolver todas sus dudas, con respecto a su institución, empresa o negocio.',
                           style: TextStyle(
                             fontSize: 16,
                             color: Color(0xFF414141),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 20),
+                            const SizedBox(height: 20),
                             TextField(
                               controller: nameHolder,
                               decoration: InputDecoration(
@@ -118,14 +116,14 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20),
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0xFF0000ff),
                                     width: 1,
                                   ),
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             TextField(
                               controller: emailHolder,
                               decoration: InputDecoration(
@@ -140,14 +138,14 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20),
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0xFF0000ff),
                                     width: 1,
                                   ),
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             TextField(
                               controller: messageHolder,
                               maxLines: 7,
@@ -161,18 +159,18 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20),
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0xFF0000ff),
                                     width: 1,
                                   ),
                                 ),
                               ),
                             ),
-                            SizedBox(height: 50),
+                            const SizedBox(height: 50),
                             ElevatedButton(
                               onPressed: clearTextInput,
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xFFced842),
+                                backgroundColor: const Color(0xFFced842),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
@@ -210,7 +208,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                 ),
                 Expanded(
                   child: Column(
-                    children: [],
+                    children: const [],
                   ),
                 )
               ],
@@ -244,7 +242,7 @@ class _MobileContactContentState extends State<MobileContactContent> {
       color: Colors.grey.shade200,
       child: Stack(
         children: [
-          Positioned.fill(
+          const Positioned.fill(
             child: Opacity(
               opacity: 0.2,
               child: Image(
@@ -260,7 +258,7 @@ class _MobileContactContentState extends State<MobileContactContent> {
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       'SI DESEA MÁS INFORMACIÓN',
                       style: TextStyle(
@@ -278,19 +276,19 @@ class _MobileContactContentState extends State<MobileContactContent> {
                     ),
                   ],
                 ),
-                SizedBox(height: 25),
-                Text(
+                const SizedBox(height: 25),
+                const Text(
                   'Queremos Atenderle y resolver todas sus dudas, con respecto a su institución, empresa o negocio.',
                   style: TextStyle(
                     fontSize: 16,
                     color: Color(0xFF414141),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     TextField(
                       controller: nameHolder,
                       decoration: InputDecoration(
@@ -303,14 +301,14 @@ class _MobileContactContentState extends State<MobileContactContent> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xFF0000ff),
                             width: 1,
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     TextField(
                       controller: emailHolder,
                       decoration: InputDecoration(
@@ -325,14 +323,14 @@ class _MobileContactContentState extends State<MobileContactContent> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xFF0000ff),
                             width: 1,
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     TextField(
                       controller: messageHolder,
                       maxLines: 5,
@@ -346,18 +344,18 @@ class _MobileContactContentState extends State<MobileContactContent> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xFF0000ff),
                             width: 1,
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 25),
+                    const SizedBox(height: 25),
                     ElevatedButton(
                       onPressed: clearTextInput,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFced842),
+                        backgroundColor: const Color(0xFFced842),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
