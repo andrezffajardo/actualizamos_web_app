@@ -15,17 +15,17 @@ class FooterContentButton extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final textColor = useState<Color>(Color(0xFF414141));
-    final iconColor = useState(Color(0xFF0000ff));
+    final textColor = useState<Color>(const Color(0xFF414141));
+    final iconColor = useState(const Color(0xFF0000ff));
 
     return MouseRegion(
       onEnter: (value) {
-        textColor.value = Color(0xFF0000ff);
-        iconColor.value = Color(0xFFced842);
+        textColor.value = const Color(0xFF0000ff);
+        iconColor.value = const Color(0xFFced842);
       },
       onExit: (value) {
-        textColor.value = Color(0xFF414141);
-        iconColor.value = Color(0xFF0000ff);
+        textColor.value = const Color(0xFF414141);
+        iconColor.value = const Color(0xFF0000ff);
       },
       child: Material(
         color: Colors.transparent,
@@ -42,7 +42,7 @@ class FooterContentButton extends HookConsumerWidget {
                   size: 18.0,
                   FontAwesomeIcons.anglesRight,
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Text(
                   text,
                   style: TextStyle(
