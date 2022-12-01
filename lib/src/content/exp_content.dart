@@ -47,14 +47,14 @@ class DesktopExpContent extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'CRECIENDO CON NUESTROS CLIENTES',
                         style: TextStyle(
                           fontSize: 18,
                           color: Color(0xFF414141),
                         ),
                       ),
-                      Text(
+                      const Text(
                         'Más de 20 años de experiencia',
                         style: TextStyle(
                           fontSize: 50,
@@ -63,7 +63,7 @@ class DesktopExpContent extends StatelessWidget {
                         ),
                       ),
                       Stack(
-                        children: [
+                        children: const [
                           Divider(
                             height: 15,
                             thickness: 1,
@@ -79,8 +79,8 @@ class DesktopExpContent extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 50),
-                  SizedBox(
+                  const SizedBox(height: 50),
+                  const SizedBox(
                     height: 100,
                     width: 350,
                     child: Text(
@@ -91,8 +91,8 @@ class DesktopExpContent extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 50),
-                  ContactButton(),
+                  const SizedBox(height: 50),
+                  const ContactButton(),
                 ],
               ),
             ),
@@ -116,15 +116,15 @@ class MobileExpContent extends StatelessWidget {
               'images/img-asesoria2.png',
               height: 300,
             ),
-            SizedBox(height: 25),
-            Text(
+            const SizedBox(height: 25),
+            const Text(
               'CRECIENDO CON NUESTROS CLIENTES',
               style: TextStyle(
                 fontSize: 14,
                 color: Color(0xFF414141),
               ),
             ),
-            Text(
+            const Text(
               'Más de 20 años\n de experiencia',
               style: TextStyle(
                 fontSize: 38,
@@ -132,8 +132,8 @@ class MobileExpContent extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 25),
-            SizedBox(
+            const SizedBox(height: 25),
+            const SizedBox(
               height: 100,
               width: 350,
               child: Text(
@@ -144,8 +144,8 @@ class MobileExpContent extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 25),
-            ContactButton(),
+            const SizedBox(height: 25),
+            const ContactButton(),
           ],
         ),
       ),
