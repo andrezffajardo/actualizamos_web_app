@@ -33,7 +33,7 @@ class DesktopClientsSection extends StatelessWidget {
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
                     'ALGUNOS DE NUESTROS CLIENTES',
                     style: TextStyle(
@@ -51,28 +51,28 @@ class DesktopClientsSection extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               Row(
                 children: [
                   Image.asset(
                     'images/LogoSJ.jpg',
                     height: 100.0,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 50.0,
                   ),
                   Image.asset(
                     'images/Logo-creditos-suministros.jpg',
                     height: 90.0,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 50.0,
                   ),
                   Container(
                     padding: const EdgeInsets.all(1.0),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: Color(0xFF29b5b0),
+                        color: const Color(0xFF29b5b0),
                         width: 2,
                       ),
                     ),
@@ -81,7 +81,7 @@ class DesktopClientsSection extends StatelessWidget {
                       height: 80.0,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 50.0,
                   ),
                   Image.asset(
@@ -108,14 +108,14 @@ class MobileClientsSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'ALGUNOS DE NUESTROS CLIENTES',
               style: TextStyle(
                 fontSize: 14,
                 color: Color(0xFF414141),
               ),
             ),
-            Align(
+            const Align(
               alignment: Alignment.center,
               child: Text(
                 'Ellos creyeron\n en nosotros',
@@ -126,16 +126,16 @@ class MobileClientsSection extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(width: 24.0),
+                const SizedBox(width: 24.0),
                 Container(
                   padding: const EdgeInsets.all(1.0),
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Color(0xFF29b5b0),
+                      color: const Color(0xFF29b5b0),
                       width: 2,
                     ),
                   ),
@@ -148,14 +148,14 @@ class MobileClientsSection extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(width: 40.0),
+                const SizedBox(width: 40.0),
                 Image.asset(
                   'images/Logo_Fund_Activa.png',
                   height: 30.0,
                 ),
               ],
             ),
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -163,7 +163,7 @@ class MobileClientsSection extends StatelessWidget {
                   'images/LogoSJ.jpg',
                   height: 50.0,
                 ),
-                SizedBox(width: 50.0),
+                const SizedBox(width: 50.0),
                 Image.asset(
                   'images/Logo-creditos-suministros.jpg',
                   height: 45.0,
