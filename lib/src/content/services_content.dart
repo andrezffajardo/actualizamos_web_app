@@ -159,7 +159,7 @@ class MobileServicesContent extends StatelessWidget {
                         Text(
                           'NOSOTROS PODEMOS AYUDARLE',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 14,
                             color: Color(0xFF414141),
                             //fontWeight: FontWeight.bold,
                           ),
@@ -167,7 +167,7 @@ class MobileServicesContent extends StatelessWidget {
                         Text(
                           'Consúltenos',
                           style: TextStyle(
-                            fontSize: 50,
+                            fontSize: 38,
                             color: Color(0xFF0000ff),
                             fontWeight: FontWeight.bold,
                           ),

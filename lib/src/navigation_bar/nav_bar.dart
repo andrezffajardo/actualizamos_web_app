@@ -112,7 +112,7 @@ class MovileNavBar extends HookConsumerWidget {
 
     return Stack(children: [
       AnimatedContainer(
-        margin: EdgeInsets.only(top: 130.0),
+        margin: EdgeInsets.only(top: 100.0),
         curve: Curves.ease,
         duration: Duration(milliseconds: 400),
         height: containerHeight.value,
@@ -158,13 +158,12 @@ class MovileNavBar extends HookConsumerWidget {
           padding: EdgeInsets.all(10),
           child: Row(
             children: [
+              SizedBox(width: 30.0),
               Image.asset(
                 'images/logo.png',
-                height: 120.0,
+                height: 80.0,
               ),
-              SizedBox(
-                width: 50.0,
-              ),
+              SizedBox(width: 30.0),
               Expanded(child: Container()),
               Material(
                 child: InkWell(

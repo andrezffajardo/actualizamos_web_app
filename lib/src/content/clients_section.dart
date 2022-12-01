@@ -102,7 +102,7 @@ class MobileClientsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey.shade200,
+      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(24, 24, 24, 24),
         child: Column(
@@ -111,52 +111,68 @@ class MobileClientsSection extends StatelessWidget {
             Text(
               'ALGUNOS DE NUESTROS CLIENTES',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 14,
                 color: Color(0xFF414141),
               ),
             ),
-            Text(
-              'Ellos creyeron en nosotros',
-              style: TextStyle(
-                fontSize: 50,
-                color: Color(0xFF0000ff),
-                fontWeight: FontWeight.bold,
+            Align(
+              alignment: Alignment.center,
+              child: Text(
+                'Ellos creyeron en\n nosotros',
+                style: TextStyle(
+                  fontSize: 38,
+                  color: Color(0xFF0000ff),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             SizedBox(height: 50),
-            Image.asset(
-              'images/LogoSJ.jpg',
-              height: 100.0,
-            ),
-            SizedBox(
-              width: 50.0,
-            ),
-            Image.asset(
-              'images/Logo-creditos-suministros.jpg',
-              height: 90.0,
-            ),
-            SizedBox(
-              width: 50.0,
-            ),
-            Container(
-              padding: const EdgeInsets.all(1.0),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Color(0xFF29b5b0),
-                  width: 2,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(width: 50.0),
+                Container(
+                  padding: const EdgeInsets.all(1.0),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Color(0xFF29b5b0),
+                      width: 2,
+                    ),
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'images/Logo-Edward-Gonzalez.png',
+                        height: 40.0,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              child: Image.asset(
-                'images/Logo-Edward-Gonzalez.png',
-                height: 80.0,
-              ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                Image.asset(
+                  'images/Logo_Fund_Activa.png',
+                  height: 30.0,
+                ),
+              ],
             ),
-            SizedBox(
-              width: 50.0,
-            ),
-            Image.asset(
-              'images/Logo_Fund_Activa.png',
-              height: 80.0,
+            SizedBox(height: 25),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'images/LogoSJ.jpg',
+                  height: 50.0,
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                Image.asset(
+                  'images/Logo-creditos-suministros.jpg',
+                  height: 45.0,
+                ),
+              ],
             ),
           ],
         ),

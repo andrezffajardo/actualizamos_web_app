@@ -75,7 +75,7 @@ class MobileInterSection extends StatelessWidget {
             Text(
               'TENEMOS RÁPIDAS SOLUCIONES',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 14,
                 color: Color(0xFF414141),
               ),
             ),
@@ -83,7 +83,7 @@ class MobileInterSection extends StatelessWidget {
               child: Text(
                 '¿Necesita que le\n asesoremos ya?',
                 style: TextStyle(
-                  fontSize: 50,
+                  fontSize: 38,
                   color: Color(0xFF0000ff),
                   fontWeight: FontWeight.bold,
                 ),

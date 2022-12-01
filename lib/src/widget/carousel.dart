@@ -115,7 +115,7 @@ class MobileCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: 300.0,
+        height: 200.0,
         autoPlay: true,
         //enlargeCenterPage: true,
         viewportFraction: 0.99,

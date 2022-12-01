@@ -106,7 +106,7 @@ class MobileExpContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.grey.shade100,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(24, 24, 24, 24),
         child: Column(
@@ -120,14 +120,14 @@ class MobileExpContent extends StatelessWidget {
             Text(
               'CRECIENDO CON NUESTROS CLIENTES',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 14,
                 color: Color(0xFF414141),
               ),
             ),
             Text(
               'Más de 20 años\n de experiencia',
               style: TextStyle(
-                fontSize: 50,
+                fontSize: 38,
                 color: Color(0xFF0000ff),
                 fontWeight: FontWeight.bold,
               ),
