@@ -12,7 +12,7 @@ class ContactButton extends HookConsumerWidget {
     return ElevatedButton(
       onPressed: () => ref.read(currentPageProvider.state).state = contactKey,
       style: ElevatedButton.styleFrom(
-        backgroundColor: Color(0xFFced842),
+        backgroundColor: const Color(0xFFced842),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
         ),
