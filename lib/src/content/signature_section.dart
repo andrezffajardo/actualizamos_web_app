@@ -34,7 +34,7 @@ class DesktopSignatureSection extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'Made with Flutter',
                         style: TextStyle(
@@ -84,7 +84,7 @@ class MobileSignatureSection extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'Made with Flutter',
                         style: TextStyle(
