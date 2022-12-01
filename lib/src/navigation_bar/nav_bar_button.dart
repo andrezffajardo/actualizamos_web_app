@@ -14,17 +14,17 @@ class NavBarButton extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final textColor = useState<Color>(Color(0xFF414141));
-    final colorBorder = useState(Color(0x00000000));
+    final textColor = useState<Color>(const Color(0xFF414141));
+    final colorBorder = useState(const Color(0x00000000));
 
     return MouseRegion(
       onEnter: (value) {
-        textColor.value = Color(0xFF0000ff);
-        colorBorder.value = Color(0xFF0000ff);
+        textColor.value = const Color(0xFF0000ff);
+        colorBorder.value = const Color(0xFF0000ff);
       },
       onExit: (value) {
-        textColor.value = Color(0xFF414141);
-        colorBorder.value = Color(0x00000000);
+        textColor.value = const Color(0xFF414141);
+        colorBorder.value = const Color(0x00000000);
       },
       child: Material(
         color: Colors.transparent,
@@ -43,7 +43,7 @@ class NavBarButton extends HookConsumerWidget {
             ),
             height: 50,
             alignment: Alignment.center,
-            margin: EdgeInsets.symmetric(horizontal: 16),
+            margin: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
               text,
               style: TextStyle(
