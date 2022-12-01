@@ -29,7 +29,7 @@ class DesktopServicesContent extends StatelessWidget {
       child: Row(
         children: [
           Column(
-            children: [
+            children: const [
               ServicesCard(
                   text: 'CONSULTORÍA GERENCIAL',
                   image: 'images/servicios1.jpg'),
@@ -38,7 +38,7 @@ class DesktopServicesContent extends StatelessWidget {
             ],
           ),
           Column(
-            children: [
+            children: const [
               ServicesCard(
                   text: 'AUDITORÍA Y REVISORÍA FISCAL',
                   image: 'images/servicios2.jpg'),
@@ -49,7 +49,7 @@ class DesktopServicesContent extends StatelessWidget {
             children: [
               Card(
                 elevation: 0.0,
-                margin: EdgeInsets.all(20.0),
+                margin: const EdgeInsets.all(20.0),
                 child: SizedBox(
                   height: 400,
                   width: 350,
@@ -60,7 +60,7 @@ class DesktopServicesContent extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'NOSOTROS PODEMOS AYUDARLE',
                             style: TextStyle(
                               fontSize: 18,
@@ -68,7 +68,7 @@ class DesktopServicesContent extends StatelessWidget {
                               //fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
+                          const Text(
                             'Consúltenos',
                             style: TextStyle(
                               fontSize: 50,
@@ -77,7 +77,7 @@ class DesktopServicesContent extends StatelessWidget {
                             ),
                           ),
                           Stack(
-                            children: [
+                            children: const [
                               SizedBox(
                                 width: 350,
                                 height: 10,
@@ -102,8 +102,8 @@ class DesktopServicesContent extends StatelessWidget {
                           )
                         ],
                       ),
-                      SizedBox(height: 50),
-                      SizedBox(
+                      const SizedBox(height: 50),
+                      const SizedBox(
                         height: 60,
                         width: 300,
                         child: Text(
@@ -115,13 +115,13 @@ class DesktopServicesContent extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 50),
-                      ContactButton(),
+                      const SizedBox(height: 50),
+                      const ContactButton(),
                     ],
                   ),
                 ),
               ),
-              ServicesCard(
+              const ServicesCard(
                   text:
                       'NORMAS INTERNACIONALES DE INFORMACION FINANCIERA - NIIF',
                   image: 'images/servicios4.jpg'),
@@ -145,7 +145,7 @@ class MobileServicesContent extends StatelessWidget {
           children: [
             Card(
               elevation: 0.0,
-              margin: EdgeInsets.all(20.0),
+              margin: const EdgeInsets.all(20.0),
               child: SizedBox(
                 height: 250,
                 width: 350,
@@ -155,7 +155,7 @@ class MobileServicesContent extends StatelessWidget {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text(
                           'NOSOTROS PODEMOS AYUDARLE',
                           style: TextStyle(
@@ -174,8 +174,8 @@ class MobileServicesContent extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 25),
-                    SizedBox(
+                    const SizedBox(height: 25),
+                    const SizedBox(
                       height: 60,
                       width: 300,
                       child: Text(
@@ -187,21 +187,22 @@ class MobileServicesContent extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 25),
-                    ContactButton(),
+                    const SizedBox(height: 25),
+                    const ContactButton(),
                   ],
                 ),
               ),
             ),
-            ServicesCard(
+            const ServicesCard(
                 text: 'CONSULTORÍA GERENCIAL', image: 'images/servicios1.jpg'),
-            ServicesCard(
+            const ServicesCard(
                 text: 'OUTSOURCING CONTABLE', image: 'images/servicios5.jpg'),
-            ServicesCard(
+            const ServicesCard(
                 text: 'AUDITORÍA Y REVISORÍA FISCAL',
                 image: 'images/servicios2.jpg'),
-            ServicesCard(text: 'IMPUESTOS', image: 'images/servicios3.jpg'),
-            ServicesCard(
+            const ServicesCard(
+                text: 'IMPUESTOS', image: 'images/servicios3.jpg'),
+            const ServicesCard(
                 text: 'NORMAS INTERNACIONALES DE INFORMACION FINANCIERA - NIIF',
                 image: 'images/servicios4.jpg'),
           ],
