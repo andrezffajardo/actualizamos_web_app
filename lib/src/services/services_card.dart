@@ -24,7 +24,7 @@ class ServicesCard extends HookConsumerWidget {
         cardElevation.value = 5.0;
       },
       child: Card(
-        margin: EdgeInsets.all(20.0),
+        margin: const EdgeInsets.all(20.0),
         elevation: cardElevation.value,
         child: Container(
           height: 400,
@@ -43,7 +43,7 @@ class ServicesCard extends HookConsumerWidget {
             ),
             child: Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 color: Color(0xFF0000ff),
                 fontWeight: FontWeight.bold,
